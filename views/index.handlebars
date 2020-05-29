@@ -1,0 +1,29 @@
+<h1>Eat-Da-Burger!</h1>
+
+<form>
+  <p>
+    <label for="name">Type burger name here: </label>
+    <input type="text" name="burger" id="burgerInput">
+  </p>
+  <button id="addBurger">Add Burger</button>
+</form>
+<p> Burger List </p>
+<ol id="burgerList">
+  {{#each burger}}
+  <li>
+    {{this.burger_name}}
+    <button class="eat" data-id="{{this.id}}">Devour!</button>
+  </li>
+  {{/each}}
+</ol>
+
+<p>Devoured Burgers</p>
+<ul id="eaten">
+  {{#each eaten}}
+  <li>
+    {{this.burger_name}}
+  </li>
+{{/each}}
+</ul>
+
+<script src="./burger.js"></script>
