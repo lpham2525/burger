@@ -1,7 +1,7 @@
 # Node Express Handlebars (OR Express-React-Views)
---------------------------------------------------
-#Image: 
+-------------------------------------------------- 
 ![Eat-Da-Burger Snapshot](./public/assets/img/burger.png?raw=true "burger ingredients")
+----------------------------------------------------------------
 
 * Eat-Da-Burger! is an app that lets users input the names of burgers they'd like to eat.
 
