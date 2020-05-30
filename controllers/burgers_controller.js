@@ -1,4 +1,4 @@
-const { Burger } = require('../models/burger.js')
+const Burger = require('../models/burger.js')
 const router = require('express').Router()
 
 router.get('/burgers', (req, res) => Burger
