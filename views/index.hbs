@@ -1,5 +1,8 @@
 <h1>Eat-Da-Burger!</h1>
-
+<div id="pic">
+  <img src="https://img.sndimg.com/food/image/upload/c_thumb,q_80,w_412,h_232/v1/img/mpx/5458744_16x9.jpg
+" alt="hamburger"> 
+</div>
 <form>
   <p>
     <label for="name">Type burger name here: </label>
@@ -7,6 +10,7 @@
   </p>
   <button id="addBurger">Add Burger</button>
 </form>
+<div id="newBurgers">
 <p> Burger List </p>
 <ol id="burgerList">
   {{#each burger}}
@@ -16,7 +20,9 @@
   </li>
   {{/each}}
 </ol>
+</div>
 
+<div id="eatenArea">
 <p>Devoured Burgers</p>
 <ul id="eaten">
   {{#each eaten}}
@@ -25,6 +31,6 @@
   </li>
 {{/each}}
 </ul>
-
+</div>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./app.js"></script>
