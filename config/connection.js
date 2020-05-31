@@ -1,9 +1,9 @@
 const mysql = require('mysql2')
-const connection = mysql.createConnection('mysql://root:rootroot@localhost:3306/burgers_db')
+const connection = mysql.createConnection(process.env.JAWSDB_URL || process.env.LOCAL_URL)
 
 connection.connect((err) => {
-  console.log("connected!")
-  if(err) {
+  console.log('connected!')
+  if (err) {
     console.error(err)
   }
 })
