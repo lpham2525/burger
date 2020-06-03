@@ -8,8 +8,8 @@ module.exports = {
     })
   },
 
-  insertOne (table, data, cb) {
-    connection.query(`INSERT INTO ${table} SET ?`, data, (err, info) => {
+  insertOne (data, cb) {
+    connection.query(`INSERT INTO burgers (burger_name) VALUES (?)`, [data], (err, info) => {
       if (err) { console.log(err) }
       cb(info)
     })

@@ -1,11 +1,12 @@
-const orm = require('../config/orm')
+const orm = require('../config/orm.js')
 
 module.exports = {
   getBurgers (cb) {
     orm.selectAll('burgers', burgers => cb(burgers))
   },
   addBurger (burger, cb) {
-    orm.insertOne('burgers', burger, info => cb(info)
+    console.log(burger)
+    orm.insertOne(burger, info => cb(info)
     )
   },
   updateBurger (changes, where, cb) {

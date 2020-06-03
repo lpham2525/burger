@@ -1,13 +1,24 @@
 const Burger = require('../models/burger.js')
 const router = require('express').Router()
 
-router.get('/burgers', (req, res) => Burger
-  .selectAll(info => res.json(info)))
+router.post('/burgers', (req, res) => {
+  console.log(req.body)
+  Burger.addBurger(req.body.burger_name, info => {
+    res.json({ id: info.insertID })
+  })
+})
 
-router.post('/burgers', (req, res) => Burger
-  .insertOne(req.body, info => res.json(info)))
+router.put('/burgers/:id', (req, res) => {
+  const condition = 'id = ' + req.params.id
+  console.log('condition', condition)
 
-router.put('/burgers/:id', (req, res) => Burger
-  .updateOne(req.body, { id: req.params.id }, info => res.json(info)))
+  Burger.updateBurger({ devoured: req.body.devoured }, { id: req.params.id }, info => {
+    if (info.changedRows === 0) {
+      return res.status(404).end()
+    } else {
+      res.status(200).end()
+    }
+  })
+})
 
 module.exports = router
