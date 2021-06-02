@@ -1,5 +1,5 @@
 document.getElementById('addBurger').addEventListener('click', event => {
-  console.log('hi')
+  console.log(event)
   event.preventDefault()
   axios.post('/api/burgers', {
     burger_name: document.getElementById('burgerInput').value
@@ -11,6 +11,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
       <button class="eat" data-id="{{this.id}}">Devour!</button>
       `
       document.getElementById('burgerList').append(burgerElem)
+      document.getElementById('burgerInput').innerHTML = ''
     })
     .catch(err => console.log(err))
 })
