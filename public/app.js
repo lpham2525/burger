@@ -3,6 +3,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
   event.preventDefault()
   axios.post('/api/burgers', {
     burger_name: document.getElementById('burgerInput').value
+    devoured: false
   })
     .then(({ data }) => {
       const burgerElem = document.createElement('li')
@@ -17,6 +18,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
 })
 
 document.addEventListener('click', event => {
+  console.log(event)
   if (event.target.className === 'eat') {
     axios.put(`/api/burgers/${event.target.dataset.id}`, { devoured: 1 })
       .then(({ data }) => {

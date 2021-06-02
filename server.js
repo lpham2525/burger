@@ -12,9 +12,3 @@ app.use(express.json())
 app.use(require('./controllers'))
 
 app.listen(process.env.PORT || 3000, () => console.log('Server running on: http://localhost: ' + PORT))
-
-const express = require('express')
-const { join } = require('path')
-
-const app = express()
-
