@@ -13,11 +13,13 @@
 <div id="newBurgers">
 <p> Burger List </p>
 <ol id="burgerList">
-  {{#each burger}}
+  {{#each burgers}}
+  {{#unless devoured}}
   <li>
     {{this.burger_name}}
     <button class="eat" data-id="{{this.id}}">Devour!</button>
   </li>
+  {{/unless}}
   {{/each}}
 </ol>
 </div>
@@ -25,10 +27,12 @@
 <div id="eatenArea">
 <p>Devoured Burgers</p>
 <ul id="eaten">
-  {{#each burger}}
+  {{#each burgers}}
+  {{#if devoured}}
   <li>
     {{this.burger_name}}
   </li>
+  {{/if}}
 {{/each}}
 </ul>
 </div>
