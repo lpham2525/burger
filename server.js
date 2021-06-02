@@ -11,4 +11,4 @@ app.use(express.json())
 
 app.use(require('./controllers'))
 
-app.listen(process.env.PORT || 3000, () => console.log('Server running on: http://localhost: ' + PORT))
+app.listen(process.env.PORT || 3000, () => console.log('Server running on: http://localhost: 3000'))

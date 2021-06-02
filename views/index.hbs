@@ -12,7 +12,7 @@
 </form>
 <div id="newBurgers">
 <p> Burger List </p>
-<ol id="burgerList">
+<ul id="burgerList">
   {{#each burgers}}
   {{#unless devoured}}
   <li>
@@ -21,7 +21,7 @@
   </li>
   {{/unless}}
   {{/each}}
-</ol>
+</ul>
 </div>
 
 <div id="eatenArea">
@@ -36,5 +36,3 @@
 {{/each}}
 </ul>
 </div>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="./app.js"></script>

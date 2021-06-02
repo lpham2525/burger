@@ -3,7 +3,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
   event.preventDefault()
   axios.post('/api/burgers', {
     burger_name: document.getElementById('burgerInput').value
-    devoured: false
+    // devoured: false
   })
     .then(({ data }) => {
       const burgerElem = document.createElement('li')
@@ -13,6 +13,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
       `
       document.getElementById('burgerList').append(burgerElem)
       document.getElementById('burgerInput').innerHTML = ''
+      location.reload()
     })
     .catch(err => console.log(err))
 })
@@ -26,6 +27,7 @@ document.addEventListener('click', event => {
         devElem.innerHTML = `${event.target.value}
           `
         document.getElementById('eaten').append(devElem)
+        location.reload()
       })
       .catch(err => console.log(err))
   }
