@@ -3,7 +3,6 @@ document.getElementById('addBurger').addEventListener('click', event => {
   event.preventDefault()
   axios.post('/api/burgers', {
     burger_name: document.getElementById('burgerInput').value
-    // devoured: false
   })
     .then(({ data }) => {
       const burgerElem = document.createElement('li')

@@ -1,16 +1,19 @@
 body {
   text-align: center;
-  background-color: goldenrod;
   background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fburger-background&psig=AOvVaw2MA5hUAMg4jRqPCv9F0jmK&ust=1590902327530000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDpgJTr2ukCFQAAAAAdAAAAABAD");
   background-size: cover;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* #newBurgers{
+#newBurgers{
   float: left;
   margin-left: 30px;
 }
 
 #eatenList{
   float: right;
-} */
+}
+
+li {
+  list-style-type: none;
+}
