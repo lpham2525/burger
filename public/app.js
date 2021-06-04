@@ -32,32 +32,13 @@ document.addEventListener('click', event => {
   }
 })
 
-const deleteBurger = id => {
-  axios.delete(`/api/burgers/${event.target.dataset.id}`)
-    .then(() => {
-      console.log(event)
-    })
-    .catch(err => console.error(err))
-}
-
-// document.addEventListener('click', event => {
-//   console.log(event)
-//   if (event.target.className === 'delete') {
-
-//     axios.delete(`/api/burgers/${event.target.dataset.id}`, { deleted: 1 })
-//       .then(({ data }) => {
-//         console.log(data)
-//         deleteBurger(event.target.parentNode.dataset.delete)
-//         location.reload()
-//       })
-//       .catch(err => console.log(err))
-//   }
-// })
-
 document.addEventListener('click', event => {
   if (event.target.className === 'delete') {
-    axios.delete(`/api/burgers/${event.target.dataset.id}`, { deleted: 1 })
-    deleteBurger(event.target.parentNode.dataset.id)
-    location.reload()
+    axios.delete(`/api/burgers/${event.target.dataset.id}`)
+      .then(() => {
+        event.target.parentNode.remove()
+        location.reload()
+      })
+      .catch(err => console.log(err))
   }
 })
