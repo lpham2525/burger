@@ -7,7 +7,6 @@ module.exports = {
       cb(data)
     })
   },
-
   insertOne (data, cb) {
     connection.query(`INSERT INTO burgers (burger_name) VALUES (?)`, [data], (err, info) => {
       if (err) { console.log(err) }
@@ -18,6 +17,13 @@ module.exports = {
     connection.query(`UPDATE ${table} SET ? WHERE ?`, [changes, where], (err, info) => {
       if (err) { console.log(err) }
       cb(info)
-    })
+    }),
+    deleteOne(table, where, cb ) {
+      connection.query(`DELETE FROM ${table} WHERE ?`, where, (err, info) => {
+        if (err) { console.log(err)}
+        cb(info)
+      }
+      )
+    }
   }
 }

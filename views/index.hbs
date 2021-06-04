@@ -13,9 +13,9 @@
   <button id="addBurger">Add Burger</button>
 </form>
 <div id="newBurgers">
-<p> Burger List </p>
   <div class="row">
     <div class="col">
+      <p> Burger List </p>
       <ul id="burgerList">
         {{#each burgers}}
         {{#unless devoured}}
@@ -35,6 +35,7 @@
           {{#if devoured}}
           <li>
             {{this.burger_name}}
+            <button class="delete" data-id="{{this.id}}">Delete</button>
           </li>
           {{/if}}
           {{/each}}
