@@ -17,13 +17,12 @@ module.exports = {
     connection.query(`UPDATE ${table} SET ? WHERE ?`, [changes, where], (err, info) => {
       if (err) { console.log(err) }
       cb(info)
-    }),
-    deleteOne(table, where, cb ) {
-      connection.query(`DELETE FROM ${table} WHERE ?`, where, (err, info) => {
-        if (err) { console.log(err)}
-        cb(info)
-      }
-      )
-    }
+    })
+  },
+  deleteOne(table, where, cb) {
+    connection.query(`DELETE FROM ${table} WHERE ?`, where, (err, info) => {
+      if (err) { console.log(err)}
+      cb(info)
+    })
   }
 }

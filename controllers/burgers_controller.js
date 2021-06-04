@@ -19,18 +19,20 @@ router.put('/burgers/:id', (req, res) => {
       res.status(200).end()
     }
   })
-
-  router.delete('/burgers/:id', (req, res) => {
-    const deleted = 'id = ' + req.params.id
-    console.log('deleted: ', deleted)
-
-    Burger.removeBurger({ deleted: req.body.deleted }, { id: req.params.id }, info => {
-      if (info.changedRows === 0) {
-        return res.status(404).end()
-      } else {
-        res.status(200).end()
-      }
-  })
 })
 
-module.exports = router
+  router.delete('/burgers/:id', (req, res) => {
+    // const deleted = 'id = ' + req.params.id
+    // console.log('deleted: ', deleted)
+
+    Burger.deleteBurger({ id: req.params.id }, info => {
+      res.json(info)
+      // if (info.changedRows === 0) {
+      //   return res.status(404).end()
+      // } else {
+      //   res.status(200).end()
+      // }
+    })
+    })
+
+  module.exports = router
