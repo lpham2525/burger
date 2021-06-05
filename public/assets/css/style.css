@@ -16,6 +16,53 @@ body::after {
   z-index: -1;
 }
 
+h2 {
+  border: 2px solid black;
+  background-color: rgb(18, 163, 91);
+}
+
 li {
   list-style-type: none;
+}
+
+button {
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+}
+
+#addBurger {
+  background-color: rgb(13, 13, 182);
+  color: white;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -ms-transition: background 0.5s;
+  -o-transition: background 0.5s;
+}
+
+.eat {
+  background-color: purple;
+  color: white;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -ms-transition: background 0.5s;
+  -o-transition: background 0.5s;
+}
+
+.delete {
+  background-color: rgb(167, 31, 31);
+  color: white;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -ms-transition: background 0.5s;
+  -o-transition: background 0.5s;
+}
+
+button:hover {
+  background: goldenrod;
 }

@@ -2,8 +2,6 @@
   <div class="container" id="main">
 <h1>Eat-Da-Burger!</h1>
 <div id="pic">
-  {{!-- <img src="https://img.sndimg.com/food/image/upload/c_thumb,q_80,w_412,h_232/v1/img/mpx/5458744_16x9.jpg
-" alt="hamburger">  --}}
 </div>
 <br>
 <form>
@@ -16,7 +14,7 @@
 <div id="newBurgers">
   <div class="row">
     <div class="col">
-      <p> Burger List </p>
+      <h2> Burger List </h2>
       <ul id="burgerList">
         {{#each burgers}}
         {{#unless devoured}}
@@ -30,7 +28,7 @@
     </div>
     <div class="col">
       <div id="eatenArea">
-        <p>Devoured Burgers</p>
+        <h2>Devoured Burgers</h2>
         <ul id="eaten">
           {{#each burgers}}
           {{#if devoured}}
