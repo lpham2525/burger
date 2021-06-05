@@ -16,13 +16,24 @@ body::after {
   z-index: -1;
 }
 
+.hero {
+  background-color: cadetblue;
+  box-shadow: 5px 10px #888888;
+}
+
+#pic {
+  height: 200px;
+  padding-bottom: 20px;
+}
+
 h2 {
-  border: 2px solid black;
   background-color: rgb(18, 163, 91);
 }
 
 li {
   list-style-type: none;
+  background-color: lightgoldenrodyellow;
+  margin: 5px 0px 5px 0px;
 }
 
 button {
