@@ -4,6 +4,9 @@
       <h1>Eat-Da-Burger!</h1>
     </div>
 <br>
+<h2>Welcome to Eat-Da-Burger! </h2>
+<p>Come devour a burger from the Burger List.</p>
+<p>Or feel free to create your own burger below and add it to the list!</p>
 <form>
   <p>
     <label for="name">Type burger name here: </label>
@@ -19,6 +22,7 @@
         {{#each burgers}}
         {{#unless devoured}}
         <li>
+          <img src="./assets/img/uneaten.jpg" class="small" alt="green hamburger icon">
           {{this.burger_name}}
           <button class="eat" data-id="{{this.id}}">Devour!</button>
         </li>
@@ -33,6 +37,7 @@
           {{#each burgers}}
           {{#if devoured}}
           <li>
+            <img src="./assets/img/small.jpg" class="small" alt="black hamburger icon">
             {{this.burger_name}}
             <button class="delete" data-id="{{this.id}}">X</button>
           </li>

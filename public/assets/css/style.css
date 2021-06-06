@@ -54,6 +54,16 @@ button {
   -o-transition: background 0.5s;
 }
 
+.small {
+  height: 35px;
+  width: 35px;
+}
+
+.eatenBurger {
+  height: 35px;
+  width: 35px;
+}
+
 .eat {
   background-color: purple;
   color: white;
