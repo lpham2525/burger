@@ -1,12 +1,9 @@
-<div class="opacity">
-  <div class="container" id="main">
-    <div class="hero">
-      <h1>Eat-Da-Burger!</h1>
-    </div>
+<h1 class="hero">Eat-Da-Burger!</h1>
 <br>
-<h2>Welcome to Eat-Da-Burger! </h2>
-<p>Come devour a burger from the Burger List.</p>
-<p>Or feel free to create your own burger below and add it to the list!</p>
+<div class="container" id="main">
+<h3>Welcome to Eat-Da-Burger! </h3>
+<p>Come devour a burger from the Burger List!</p>
+<p>Or create your own burger below & add it to the list!</p>
 <form>
   <p>
     <label for="name">Type burger name here: </label>
@@ -17,7 +14,7 @@
 <div id="newBurgers">
   <div class="row">
     <div class="col">
-      <h2> Burger List </h2>
+      <h2><strong> Burger List </strong></h2>
       <ul id="burgerList">
         {{#each burgers}}
         {{#unless devoured}}
@@ -37,7 +34,7 @@
           {{#each burgers}}
           {{#if devoured}}
           <li>
-            <img src="./assets/img/small.jpg" class="small" alt="black hamburger icon">
+            <img src="./assets/img/black.jpg" class="eatenBurger" alt="black hamburger icon">
             {{this.burger_name}}
             <button class="delete" data-id="{{this.id}}">X</button>
           </li>
@@ -48,6 +45,3 @@
     </div>
   </div>
 </div>
-</div>
-
-
